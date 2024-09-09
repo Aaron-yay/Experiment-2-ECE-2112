@@ -16,22 +16,28 @@ p.s. maiiba ung value ng normalized x pag nirun ulet ung code sa array soo ayun 
 
 # Problem 2: Divisible by 3 problem:
 for this problem I first had to initialize an array that contained the elements from 1 to 100.
-I achieved this by using the np.arange (single r) function and inputting the 1st and last element, along with the interval or increment
+I achieved this by using the np.arange (single r) function and inputting the 1st and last element, along with the interval or increment:
+
 np.arange(1, 101, 1)
 
-the next step was to turn it into a 10x10 array so I used the resize function which produced the output of a desirable 10x10 array
+the next step was to turn it into a 10x10 array so I used the resize function which produced the output of a desirable 10x10 array:
+
 np.resize(10,10)
 
-next, I needed to get the square of all the elements of the array, so I just multiplied it to itself to make sure the operation is as simple as possible
+next, I needed to get the square of all the elements of the array, so I just multiplied it to itself to make sure the operation is as simple as possible:
+
 Y = Y*Y
 
-before starting the code, I printed out the entire array again to make sure its still in the square form of the numbers from 1 to 100
+before starting the code, I printed out the entire array again to make sure its still in the square form of the numbers from 1 to 100:
+
 Y
 
-finally, I declared a new variable, f, to act as my counter for finding the number of numbers divisible by 3
+finally, I declared a new variable, f, to act as my counter for finding the number of numbers divisible by 3:
+
 f = 0
 
 with a bit of googling, experimenting, and note-referencing, I was able to make a nested for loop that will iterate over the entire array and increase the value of the variable f by 1 whenever it encounters a number divisible by 3.
+
 for y in Y:
     for x in y:
         if x % 3 == 0:
