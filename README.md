@@ -1,10 +1,10 @@
-## Experiment-2-ECE-2112
-# Intended learning outcomes:
+# Experiment-2-ECE-2112
+### Intended learning outcomes:
 1. To identify the codes and functions incorporated in the Numpy library
 2. To be able to apply and use the different codes and functions in creating a Python program using a
 Numpy library
 
-# Problem 1: Normalization problem:
+## Problem 1: Normalization problem:
 for this problem, I used the np.random.random function to automatically generate an array without having to manually input its values and dimensions allowing me to follow with the instruction of generating a random array, hence the code:
 X = np.random.random((5,5))
 
@@ -17,7 +17,7 @@ for double-checking, I used the np.load function to make sure that the value is 
 
 p.s. maiiba ung value ng normalized x pag nirun ulet ung code sa array soo ayun lng hehe
 
-# Problem 2: Divisible by 3 problem:
+## Problem 2: Divisible by 3 problem:
 for this problem I first had to initialize an array that contained the elements from 1 to 100.
 I achieved this by using the np.arange (single r) function and inputting the 1st and last element, along with the interval or increment:
 
