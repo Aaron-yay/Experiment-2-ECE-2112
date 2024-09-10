@@ -1,5 +1,8 @@
-# Experiment-2-ECE-2112
-for this next experiment, we used numpy to declare arrays, fill them up, and perform functions on them
+## Experiment-2-ECE-2112
+# Intended learning outcomes:
+1. To identify the codes and functions incorporated in the Numpy library
+2. To be able to apply and use the different codes and functions in creating a Python program using a
+Numpy library
 
 # Problem 1: Normalization problem:
 for this problem, I used the np.random.random function to automatically generate an array without having to manually input its values and dimensions allowing me to follow with the instruction of generating a random array, hence the code:
