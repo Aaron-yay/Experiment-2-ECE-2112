@@ -33,6 +33,7 @@ Just in case the .npy file was loaded in the same program using the code:
 - c
 
 ## Problem 2: Divisible by 3 problem:
+### Step-by-Step Process:
 
 In this problem, I needed a 100x100 array that contains the squares of the numbers 1 to 100. 
 
