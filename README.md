@@ -5,48 +5,59 @@
 Numpy library
 
 ## Problem 1: Normalization problem:
-for this problem, I used the np.random.random function to automatically generate an array without having to manually input its values and dimensions allowing me to follow with the instruction of generating a random array, hence the code:
-X = np.random.random((5,5))
+### Step-by-Step Process:
+In beginning the code, the NumPy library must first be imported to be able to access its functionalities, hence the first line of code is:
 
-next, I used the mean and standard deviation functions in np to quickly and conveniently get 2 values that will take forever to get if manually solved for, which leads to the appearance of both: a = np.mean(X), b = np.std(X)
+- import numpy as np
 
-finally, I divided the variable a to variable b to obtain the normalized value of the array and stored it in the variable named normalized_X
+Afterwards, I needed a 5x5 array with random values which leads to as follow:
 
-to store the value of normalized_X, I used the np.save function to save the array, whose format is np.save('name_of_npy_file',name_of_variable).
-for double-checking, I used the np.load function to make sure that the value is actually saved
+- X = np.random.random((5,5))
 
-p.s. maiiba ung value ng normalized x pag nirun ulet ung code sa array soo ayun lng hehe
+To get the mean and standard deviation, I assigned them to variables a and b respectively and used their corresponding NumPy functions:
+
+- a = np.mean(X)
+- b = np.std(X)
+
+For the normalized array of X, the following formula was used and implemented to the code:
+
+- normalized_X = (X-a)/b
+
+Lastly, the output was saved in a .npy format using the function np.save, implemented as:
+
+- np.save('X_normalized', normalized_X)
+
+Just in case the .npy file was loaded in the same program using the code:
+
+- c = np.load('X_normalized.npy)
+- c
 
 ## Problem 2: Divisible by 3 problem:
-for this problem I first had to initialize an array that contained the elements from 1 to 100.
-I achieved this by using the np.arange (single r) function and inputting the 1st and last element, along with the interval or increment:
 
-np.arange(1, 101, 1)
+In this problem, I needed a 100x100 array that contains the squares of the numbers 1 to 100. 
 
-the next step was to turn it into a 10x10 array so I used the resize function which produced the output of a desirable 10x10 array:
+To achieve this, I first defined an array containing the values from 1 to 100 using the following line of code:
 
-np.resize(10,10)
+- Y = np.arange(1,101,1)
 
-next, I needed to get the square of all the elements of the array, so I just multiplied it to itself to make sure the operation is as simple as possible:
+Next, I resized the array into a 10x10 array using the .resize function, implemented as:
 
-Y = Y*Y
+- Y.resize(10,10)
 
-before starting the code, I printed out the entire array again to make sure its still in the square form of the numbers from 1 to 100:
+To complete the array, I needed to get the squares of the value so I had a few options. Two that stood out most to me is to use the exponentiation operator ** or multiply it to itself. The code implemented was the latter:
 
-Y
+- Y = Y*Y
 
-finally, I declared a new variable, f, to act as my counter for finding the number of numbers divisible by 3:
+Now that I have a 10x10 array containing the squares of the numbers 1 to 100, I needed a variable that could hold the number of times the program will encounter a number in the array that is divisible by 3.
 
-f = 0
+Using the following code, I was able to get an array that retains the values that are divisible by 3.
 
-with a bit of googling, experimenting, and note-referencing, I was able to make a nested for loop that will iterate over the entire array and increase the value of the variable f by 1 whenever it encounters a number divisible by 3.
+- f = Y[Y%3 == 0]
 
-for y in Y:
-    for x in y:
-        if x % 3 == 0:
-            f = f+1
-        else:
-            pass      
+Finally, I saved the result (f) in a .npy format using the following line of code:
 
-to top it all off, I saved the result acquired (which is 33) and saved it as div_by_3.npy using the same function np.save
-np.save('div_by_3',f)
+- np.save('div_by_3',f)
+
+And loaded it for extra measure with the code:
+
+- np.load('div_by_3.npy')
